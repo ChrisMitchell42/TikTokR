@@ -2,7 +2,7 @@ Package: TikTokR
 Title: Tutorials for Teaching R with Open Source Data
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("Imogen", "Hill", , "", role = c("aut", "cre")),
+    c(person("Imogen", "Hill", , "", role = c("ctb")),
       person("Chris", "Mitchell", , "cmitch@liv.ac.uk", role = c("aut", "cre")))
 Description: A repository for R tutorials using open source data.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
