@@ -42,7 +42,6 @@ Lets write your first line of R code to calculate some basic math. Mathematical 
 If you are stuck, you can press the solution button but have a go before revealing the answer!
 
 ```{r five-times-two, exercise=TRUE}
-'force=TRUE'
 
 ```
 ```{r five-times-two-solution}
@@ -118,10 +117,9 @@ In R and programming, data types are the classifications we give different kinds
 - Vectors --> List of related data that is all the same type
 - NA --> This type of data represents the absence of a value and is represented by the keyword NA. There can be numeric NA, character NA and a logical NA. 
 
-### Quiz
 
 ```{r quiz}
-quiz()
+quiz(caption = "Quiz")
   question("What type of data would print('TikTok') belong to?",
            answer("Numeric"),
            answer("Character", correct = TRUE),
