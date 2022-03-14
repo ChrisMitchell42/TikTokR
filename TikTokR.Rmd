@@ -18,11 +18,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Welcome to R!
 
-Welcome to your first `lesson in R`. **What is R you may ask?** R is a language that allows you to conduct statistics and data analysis. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+Welcome to your first `lesson in R`. What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
 
 The aim throughout this module is to teach you skills in R which will allow you to do data science; that is, analysing, visualising and interpreting raw data which is usually from a file or database. We also want you to feel confident using R and enjoy learning something new!
 
-What skills you will learn throughout LIFE223QS module: 
+<span
+style = "color:red; ">What skills you will learn throughout LIFE223QS module:</span> 
 
 1. How to import data into R
 2. How to tidy data 
@@ -33,11 +34,12 @@ But firstly it is important to get to grips with R before we begin any actual st
 
 ## Exercise 1: CALCULATIONS
 
-Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with + , - , * and / . Syntax just means the structure of statements in a computer language. 
+Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / .` Syntax just means the structure of statements in a computer language. 
 
 Lets write your first line of R code to calculate some basic math. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
 
-*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *
+<span
+style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *</span>
 
 If you are stuck, you can press the solution button but have a go before revealing the answer!
 
