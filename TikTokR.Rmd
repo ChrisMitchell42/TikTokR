@@ -41,7 +41,7 @@ Lets write your first line of R code to calculate some basic math. Mathematical 
 <span
 style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *</span>
 
-If you are stuck, you can press the solution button but have a go before revealing the answer!
+**If you are stuck, you can press the solution button but have a go before revealing the answer!**
 
 ```{r five-times-two, exercise=TRUE}
 
@@ -57,7 +57,8 @@ grade_result(
 ```
 
 
-*Great! Now lets try a slightly trickier equation. Write the R code required to multiply 14 by 5 plus 20 divided by 2. Remember to use the appropriate syntax (+ , - , / and *).*
+<span
+style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write the R code required to multiply 14 by 5 plus 20 divided by 2. Remember to use the appropriate syntax `(+ , - , / and *)`.*</span>
 
 ```{r fourteen-times-five-plus-twenty-divided-two, exercise=TRUE}
 
