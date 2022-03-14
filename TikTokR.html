@@ -138,7 +138,7 @@ any actual statistics.</p>
 <h2>Exercise 1: CALCULATIONS</h2>
 <p>Lets begin with basic syntax to do mathematical calculations in R. R
 can do addition, subtraction, multiplication and division with
-<code>+ , - , * and / .</code> Syntax just means the structure of
+<code>+ , - , * and /</code>. Syntax just means the structure of
 statements in a computer language.</p>
 <p>Lets write your first line of R code to calculate some basic math.
 Mathematical operations in R follow the standard mathematical order of
@@ -180,18 +180,16 @@ data-lines="0">
 <p>We will now show you how to tell R to ignore parts of your code. Why
 would we want the computer to ignore a part of their file? Well,
 comments can:</p>
-<ol style="list-style-type: decimal">
-<li>Help other people reading the code understand it faster</li>
-</ol>
+<p><strong>1. Help other people reading the code understand it
+faster</strong></p>
 <div class="tutorial-exercise" data-label="half" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>0.5
 #The probability of flipping a coin and getting a head</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<ol start="2" style="list-style-type: decimal">
-<li>Give context for why something is written the way it is</li>
-</ol>
+<p><strong>2. Give context for why something is written the way it
+is</strong></p>
 <div class="tutorial-exercise" data-label="TikTok_count"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
@@ -199,18 +197,22 @@ data-lines="0">
 #This code will be used to count the number of times anyone tweets the word TikTok</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<ol start="3" style="list-style-type: decimal">
-<li>Ignore a line of code and see how a program will run without it</li>
-</ol>
+<p><strong>3. Ignore a line of code and see how a program will run
+without it</strong></p>
 <p>Text written in the program but not run by the computer is called a
 comment. R interprets anything after a # as a comment.</p>
-<p><em>Add a comment inside this code block of how to calculate volume
-of cube</em></p>
+<p><span style="color:red; "><em>Add a comment inside this code block of
+how to calculate volume of cube</em></span></p>
 <div class="tutorial-exercise"
 data-label="three-times-three-times-three" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code>3*3*3</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+<div class="tutorial-exercise-support"
+data-label="three-times-three-times-three-solution" data-completion="1"
+data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code>#Volume of a cube</code></pre>
 </div>
 </div>
 <div id="section-exercise-3-types-of-data" class="section level2">
@@ -521,10 +523,11 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
     chunks = list(list(label = "three-times-three-times-three", 
         code = "3*3*3\n", opts = list(include = "TRUE", label = "\"three-times-three-times-three\"", 
             exercise = "TRUE"), engine = "r")), code_check = NULL, 
-    error_check = NULL, check = NULL, solution = NULL, test_cases = NULL, 
-    options = list(eval = FALSE, echo = TRUE, results = "markup", 
-        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
-        comment = NA, highlight = FALSE, size = "normalsize", 
+    error_check = NULL, check = NULL, solution = structure("#Volume of a cube", chunk_opts = list(
+        include = TRUE, label = "three-times-three-times-three-solution")), 
+    test_cases = NULL, options = list(eval = FALSE, echo = TRUE, 
+        results = "markup", tidy = FALSE, tidy.opts = NULL, collapse = FALSE, 
+        prompt = FALSE, comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
         cache.path = "TikTokR_cache/html/", cache.vars = NULL, 
         cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
@@ -548,13 +551,13 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz", question = structure("What type of data would print(&#39;TikTok&#39;) belong to?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_e47d4f3", 
+"character")), answers = list(structure(list(id = "lnr_ans_d632369", 
     option = "Numeric", value = "Numeric", label = structure("Numeric", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2c6e5db", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_dc6f48a", 
     option = "Character", value = "Character", label = structure("Character", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e178e", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2513876", 
     option = "Logical", value = "Logical", label = structure("Logical", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -565,7 +568,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-answer", question = "quiz"), loading = structure("<strong>Loading:<\u002fstrong> \nWhat type of data would print(&#39;TikTok&#39;) belong to?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1291541135.89858, options = list()), class = c("learnr_radio", 
+    seed = 976859967.045114, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 

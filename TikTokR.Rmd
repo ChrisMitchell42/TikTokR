@@ -34,7 +34,7 @@ But firstly it is important to get to grips with R before we begin any actual st
 
 ## Exercise 1: CALCULATIONS
 
-Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / .` Syntax just means the structure of statements in a computer language. 
+Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / `. Syntax just means the structure of statements in a computer language. 
 
 Lets write your first line of R code to calculate some basic math. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
 
@@ -74,7 +74,7 @@ style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write t
 
 We will now show you how to tell R to ignore parts of your code. Why would we want the computer to ignore a part of their file? Well, comments can: 
 
-1. Help other people reading the code understand it faster
+**1. Help other people reading the code understand it faster**
 
 ```{r half, exercise=TRUE}
 0.5
@@ -84,7 +84,7 @@ We will now show you how to tell R to ignore parts of your code. Why would we wa
 
 
 
-2. Give context for why something is written the way it is 
+**2. Give context for why something is written the way it is**
 
 ```{r TikTok_count, exercise=TRUE}
 TikTok_count < 0
@@ -93,7 +93,7 @@ TikTok_count < 0
 
 
 
-3. Ignore a line of code and see how a program will run without it
+**3. Ignore a line of code and see how a program will run without it**
 
 ```{r}
 
@@ -102,12 +102,16 @@ TikTok_count < 0
 
 Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
 
-*Add a comment inside this code block of how to calculate volume of cube* 
+<span
+style = "color:red; ">*Add a comment inside this code block of how to calculate volume of cube*</span> 
 
 ```{r include=TRUE, three-times-three-times-three, exercise=TRUE}
 3*3*3
 
+```{r include=TRUE, three-times-three-times-three-solution}
+#Volume of a cube
 ```
+
 
 
 ## Exercise 3: TYPES OF DATA
