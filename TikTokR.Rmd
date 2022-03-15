@@ -17,9 +17,26 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## The Very Basics
+## The Basics
 
-Welcome to your first `lesson in R`. What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+Welcome to your first `lesson in R`. 
+
+What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+
+
+**Now the thought of coding might make you feel like this...**
+
+![](https://media.giphy.com/media/l2JhtkIh8ZwgfJZ04/giphy.gif)
+
+**And there will be times where you will look like this**
+
+![](https://media.giphy.com/media/MdA16VIoXKKxNE8Stk/giphy.gif)
+
+**However by the end of this module, you will (hopefully) find this possible!**
+
+![](https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
+
+
 
 The aim throughout this module is to teach you skills in R which will allow you to do data science; that is, analysing, visualising and interpreting raw data which is usually from a file or database. We also want you to feel confident using R and enjoy learning something new!
 
@@ -143,6 +160,10 @@ add <- function() {
 }
 ```
 
+## Lets have a go at some statistics!
+
+If stats is a new concept or you simply want to refresh your knowledge on hypotheses and p values have a look at this PDF document before moving on. 
+![hypotheses and p values](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
 
 
