@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Welcome to R!
+## The Very Basics
 
 Welcome to your first `lesson in R`. What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
 
@@ -77,13 +77,13 @@ style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write t
 We will now show you how to tell R to ignore parts of your code. We may do this if we want to add comments and annotations to our code. Humans will be able to read the comments however your computer will pass over them. Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
 
 <span
-style = "color:red; ">*Add a comment inside this code block of how to calculate volume of cube*</span> 
+style = "color:red; ">*Add a comment inside this code block of how to calculate the probability of two dice being the same particular number*</span> 
 
-```{r include=TRUE, three-times-three-times-three, exercise=TRUE}
-3*3*3
+```{r include=TRUE, sixth-times-sixth, exercise=TRUE}
+1/6*1/6
 
-```{r include=TRUE, three-times-three-times-three-solution}
-#Volume of a cube
+```{r include=TRUE, sixth-times-sixth-solution}
+#Probability of two dice being the same particular number
 ```
 
 
@@ -108,7 +108,10 @@ quiz(caption = "Quiz")
 )           
 ```
 
-You may wonder why the word print comes before TikTok. Print() is an example of a function. Functions are "self contained" modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe), process it and return a result. In this case, the print function prints its argument and returns it invisibly. 
+You may wonder why the word print comes before TikTok. Print() is an example of a function. R comes with many functions that you can use to do tasks such as random sampling. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
+
+The data you pass into the function is called the function's argument.
+In this case, the function print('Tiktok') tells the computer to do as it says; print TikTok.  
 
 *Have a go at printing your name as a character string*
 
@@ -122,9 +125,11 @@ Remember what type of data a name is!
 
 
 
-## Exercise 4: VARIABLES
+## Exercise 4: OBJECTS
 
-Now that we know how R can classify some basic types of information, we will now learn how to store them. Variables allow you to store information and associate that information with a name. In R, we assign variables by using the assignment operator, an arrow sign (<-) created by a carat and a dash. 
+Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. For example, you can save data into an object. So for example if you're given raw data about different colored cars, you can classify them according to their color. Wherever R encounters the object, it will replace it with the data saved inside. 
+
+To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it. This should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
