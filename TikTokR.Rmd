@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Welcome to R!
 
-Welcome to your first `lesson in R`. What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+Welcome to your first `lesson in R`. What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
 
 The aim throughout this module is to teach you skills in R which will allow you to do data science; that is, analysing, visualising and interpreting raw data which is usually from a file or database. We also want you to feel confident using R and enjoy learning something new!
 
@@ -34,9 +34,10 @@ But firstly it is important to get to grips with R before we begin any actual st
 
 ## Exercise 1: CALCULATIONS
 
-Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / `. Syntax just means the structure of statements in a computer language. 
 
-Lets write your first line of R code to calculate some basic math. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
+Lets write your first line of R code to calculate some basic math. The code you type is called a `command`, as it commands your computer to do something for you. The line you type it into is called the command line. When you type a command and press `run code`, your computer executes the command and shows you the results. 
+
+Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / `. Syntax just means the structure of statements in a computer language. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
 
 <span
 style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *</span>
@@ -50,12 +51,13 @@ style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'R
 5*2
 ```
 ```{r five-times-two-check}
-grade_result(
+random_praise(
   pass_if(~identical(.result, 10))
 )
 "Well done!"
 ```
 
+You will notice a [1] appears next to your result. This just lets you know that this line begins with the first value in your result.
 
 <span
 style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write the R code required to multiply 14 by 5 plus 20 divided by 2. Remember to use the appropriate syntax `(+ , - , / and *)`.*</span>
@@ -72,35 +74,7 @@ style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write t
 
 ## Exercise 2: COMMENTS
 
-We will now show you how to tell R to ignore parts of your code. Why would we want the computer to ignore a part of their file? Well, comments can: 
-
-**1. Help other people reading the code understand it faster**
-
-```{r half, exercise=TRUE}
-0.5
-#The probability of flipping a coin and getting a head
-```
-
-
-
-
-**2. Give context for why something is written the way it is**
-
-```{r TikTok_count, exercise=TRUE}
-TikTok_count < 0
-#This code will be used to count the number of times anyone tweets the word TikTok
-```
-
-
-
-**3. Ignore a line of code and see how a program will run without it**
-
-```{r}
-
-```
-
-
-Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
+We will now show you how to tell R to ignore parts of your code. We may do this if we want to add comments and annotations to our code. Humans will be able to read the comments however your computer will pass over them. Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
 
 <span
 style = "color:red; ">*Add a comment inside this code block of how to calculate volume of cube*</span> 
@@ -118,11 +92,11 @@ style = "color:red; ">*Add a comment inside this code block of how to calculate 
 
 In R and programming, data types are the classifications we give different kinds of information pieces. The different types of data we will be working with throughout this module are: 
 
-- Numeric --> Any number with or without a decimal point
-- Character --> Any grouping of characters on your keyboard or text. These strings (what they're referred to in R) are surrounded by single quotes '...' or double quotes "..."
-- Logical --> This type of data has only two possible values TRUE or FALSE (without the quotes)
-- Vectors --> List of related data that is all the same type
-- NA --> This type of data represents the absence of a value and is represented by the keyword NA. There can be numeric NA, character NA and a logical NA. 
+- `Numeric` --> Any number with or without a decimal point
+- `Character` --> Any grouping of characters on your keyboard or text. These strings (what they're referred to in R) are surrounded by single quotes '...' or double quotes "..."
+- `Logical` --> This type of data has only two possible values TRUE or FALSE (without the quotes)
+- `Vectors` --> List of related data that is all the same type
+- `NA` --> This type of data represents the absence of a value and is represented by the keyword NA. There can be numeric NA, character NA and a logical NA. 
 
 
 ```{r quiz}
