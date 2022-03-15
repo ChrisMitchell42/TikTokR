@@ -13,6 +13,7 @@ library(gradethis)
 #remotes::install_github("rstudio/gradethis",'force=TRUE')
 #gradethis::gradethis_setup()
 knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
 
@@ -143,24 +144,6 @@ add <- function() {
 ```
 
 
-
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
 
 
 ```
