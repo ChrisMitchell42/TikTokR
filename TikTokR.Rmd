@@ -32,7 +32,7 @@ What is R you may ask? **R is a language that allows you to conduct statistics a
 
 ![](https://media.giphy.com/media/MdA16VIoXKKxNE8Stk/giphy.gif)
 
-**However by the end of this module, you will (hopefully) find this possible!**
+**However by the end of this module, you will (hopefully) find this manageable!**
 
 ![](https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
 
@@ -162,9 +162,10 @@ add <- function() {
 
 ## Lets have a go at some statistics!
 
-If stats is a new concept or you simply want to refresh your knowledge on hypotheses and p values have a look at this PDF document before moving on. 
-![hypotheses and p values](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
+**If statistics is a new concept or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
+![someFile](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
+Lets use R to investigate the descriptive statistics of a dataset. Let's have a go at finding the mean, median range and standard deviation of ... 
 
 
 ```
