@@ -163,7 +163,7 @@ add <- function() {
 ## Lets have a go at some statistics!
 
 **If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
-![someFile](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
+[someFile](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
 Lets use R to investigate the descriptive statistics of a dataset. Let's have a go at finding the mean, median range and standard deviation of ... 
 
