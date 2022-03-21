@@ -145,7 +145,7 @@ Remember what type of data a name is!
 
 ## Exercise 4: OBJECTS
 
-Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. For example, you can save data into an object. So for example if you're given raw data about different colored cars, you can classify them according to their color. Wherever R encounters the object, it will replace it with the data saved inside. 
+Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. For example, you can save data into an object. So for example if you're given raw data about different Tiktok creators, we can assign them for e.g. their gender or nationality. Wherever R encounters the object, it will replace it with the data saved inside. 
 
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it. This should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
@@ -162,7 +162,7 @@ add <- function() {
 
 ## Lets have a go at some statistics!
 
-**If statistics is a new concept or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
+**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
 ![someFile](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
 Lets use R to investigate the descriptive statistics of a dataset. Let's have a go at finding the mean, median range and standard deviation of ... 
