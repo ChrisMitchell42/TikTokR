@@ -13,16 +13,35 @@ library(gradethis)
 #remotes::install_github("rstudio/gradethis",'force=TRUE')
 #gradethis::gradethis_setup()
 knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
 
-## Welcome to R!
+## The Basics
 
-Welcome to your first `lesson in R`. **What is R you may ask?** R is a language that allows you to conduct statistics and data analysis. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+Welcome to your first `lesson in R`. 
+
+What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+
+
+**Now the thought of coding might make you feel like this...**
+
+![](https://media.giphy.com/media/l2JhtkIh8ZwgfJZ04/giphy.gif)
+
+**And there will be times where you will look like this**
+
+![](https://media.giphy.com/media/MdA16VIoXKKxNE8Stk/giphy.gif)
+
+**However by the end of this module, you will (hopefully) find this manageable!**
+
+![](https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
+
+
 
 The aim throughout this module is to teach you skills in R which will allow you to do data science; that is, analysing, visualising and interpreting raw data which is usually from a file or database. We also want you to feel confident using R and enjoy learning something new!
 
-What skills you will learn throughout LIFE223QS module: 
+<span
+style = "color:red; ">What skills you will learn throughout LIFE223QS module:</span> 
 
 1. How to import data into R
 2. How to tidy data 
@@ -33,13 +52,15 @@ But firstly it is important to get to grips with R before we begin any actual st
 
 ## Exercise 1: CALCULATIONS
 
-Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with + , - , * and / . Syntax just means the structure of statements in a computer language. 
 
-Lets write your first line of R code to calculate some basic math. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
+Lets write your first line of R code to calculate some basic math. The code you type is called a `command`, as it commands your computer to do something for you. The line you type it into is called the command line. When you type a command and press `run code`, your computer executes the command and shows you the results. 
 
-*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *
+Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / `. Syntax just means the structure of statements in a computer language. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
 
-If you are stuck, you can press the solution button but have a go before revealing the answer!
+<span
+style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'Run Code'. You can then check your answer by pressing 'Submit Answer'. *</span>
+
+**If you are stuck, you can press the solution button but have a go before revealing the answer!**
 
 ```{r five-times-two, exercise=TRUE}
 
@@ -48,14 +69,16 @@ If you are stuck, you can press the solution button but have a go before reveali
 5*2
 ```
 ```{r five-times-two-check}
-grade_result(
+random_praise(
   pass_if(~identical(.result, 10))
 )
 "Well done!"
 ```
 
+You will notice a [1] appears next to your result. This just lets you know that this line begins with the first value in your result.
 
-*Great! Now lets try a slightly trickier equation. Write the R code required to multiply 14 by 5 plus 20 divided by 2. Remember to use the appropriate syntax (+ , - , / and *).*
+<span
+style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write the R code required to multiply 14 by 5 plus 20 divided by 2. Remember to use the appropriate syntax `(+ , - , / and *)`.*</span>
 
 ```{r fourteen-times-five-plus-twenty-divided-two, exercise=TRUE}
 
@@ -69,53 +92,29 @@ grade_result(
 
 ## Exercise 2: COMMENTS
 
-We will now show you how to tell R to ignore parts of your code. Why would we want the computer to ignore a part of their file? Well, comments can: 
+We will now show you how to tell R to ignore parts of your code. We may do this if we want to add comments and annotations to our code. Humans will be able to read the comments however your computer will pass over them. Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
 
-1. Help other people reading the code understand it faster
+<span
+style = "color:red; ">*Add a comment inside this code block of how to calculate the probability of two dice being the same particular number*</span> 
 
-```{r half, exercise=TRUE}
-0.5
-#The probability of flipping a coin and getting a head
+```{r include=TRUE, sixth-times-sixth, exercise=TRUE}
+1/6*1/6
+
+```{r include=TRUE, sixth-times-sixth-solution}
+#Probability of two dice being the same particular number
 ```
 
-
-
-
-2. Give context for why something is written the way it is 
-
-```{r TikTok_count, exercise=TRUE}
-TikTok_count < 0
-#This code will be used to count the number of times anyone tweets the word TikTok
-```
-
-
-
-3. Ignore a line of code and see how a program will run without it
-
-```{r}
-
-```
-
-
-Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
-
-*Add a comment inside this code block of how to calculate volume of cube* 
-
-```{r include=TRUE, three-times-three-times-three, exercise=TRUE}
-3*3*3
-
-```
 
 
 ## Exercise 3: TYPES OF DATA
 
 In R and programming, data types are the classifications we give different kinds of information pieces. The different types of data we will be working with throughout this module are: 
 
-- Numeric --> Any number with or without a decimal point
-- Character --> Any grouping of characters on your keyboard or text. These strings (what they're referred to in R) are surrounded by single quotes '...' or double quotes "..."
-- Logical --> This type of data has only two possible values TRUE or FALSE (without the quotes)
-- Vectors --> List of related data that is all the same type
-- NA --> This type of data represents the absence of a value and is represented by the keyword NA. There can be numeric NA, character NA and a logical NA. 
+- `Numeric` --> Any number with or without a decimal point
+- `Character` --> Any grouping of characters on your keyboard or text. These strings (what they're referred to in R) are surrounded by single quotes '...' or double quotes "..."
+- `Logical` --> This type of data has only two possible values TRUE or FALSE (without the quotes)
+- `Vectors` --> List of related data that is all the same type
+- `NA` --> This type of data represents the absence of a value and is represented by the keyword NA. There can be numeric NA, character NA and a logical NA. 
 
 
 ```{r quiz}
@@ -127,7 +126,10 @@ quiz(caption = "Quiz")
 )           
 ```
 
-You may wonder why the word print comes before TikTok. Print() is an example of a function. Functions are "self contained" modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe), process it and return a result. In this case, the print function prints its argument and returns it invisibly. 
+You may wonder why the word print comes before TikTok. Print() is an example of a function. R comes with many functions that you can use to do tasks such as random sampling. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
+
+The data you pass into the function is called the function's argument.
+In this case, the function print('Tiktok') tells the computer to do as it says; print TikTok.  
 
 *Have a go at printing your name as a character string*
 
@@ -141,9 +143,11 @@ Remember what type of data a name is!
 
 
 
-## Exercise 4: VARIABLES
+## Exercise 4: OBJECTS
 
-Now that we know how R can classify some basic types of information, we will now learn how to store them. Variables allow you to store information and associate that information with a name. In R, we assign variables by using the assignment operator, an arrow sign (<-) created by a carat and a dash. 
+Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. For example, you can save data into an object. So for example if you're given raw data about different Tiktok creators, we can assign them for e.g. their gender or nationality. Wherever R encounters the object, it will replace it with the data saved inside. 
+
+To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it. This should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
@@ -156,25 +160,12 @@ add <- function() {
 }
 ```
 
+## Lets have a go at some statistics!
 
+**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
+![someFile](Home/Documents/TikTokR/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
+Lets use R to investigate the descriptive statistics of a dataset. Let's have a go at finding the mean, median range and standard deviation of ... 
 
 
 ```
