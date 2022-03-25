@@ -92,7 +92,9 @@ style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write t
 
 ## Exercise 2: COMMENTS
 
-We will now show you how to tell R to ignore parts of your code. We may do this if we want to add comments and annotations to our code. Humans will be able to read the comments however your computer will pass over them. Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
+We will now show you how to tell R to ignore parts of your code. We may do this if we want to add comments and annotations to our code. Comments can help others reading the code understand it faster or it may remind ourselves why we have done a particular line of code if we were to revisit it after a certain period of time. 
+
+Humans will be able to read the comments however your computer will pass over them. Text written in the program but not run by the computer is called a comment. R interprets anything after a # as a comment.  
 
 <span
 style = "color:red; ">*Add a comment inside this code block of how to calculate the probability of two dice being the same particular number*</span> 
@@ -126,7 +128,7 @@ quiz(caption = "Quiz")
 )           
 ```
 
-You may wonder why the word print comes before TikTok. Print() is an example of a function. R comes with many functions that you can use to do tasks such as random sampling. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
+You may wonder why the word print comes before TikTok. Print() is an example of a function. A function allows you to manipulate data. R comes with many functions that you can manipulate data with such as random sampling. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
 
 The data you pass into the function is called the function's argument.
 In this case, the function print('Tiktok') tells the computer to do as it says; print TikTok.  
@@ -145,28 +147,44 @@ Remember what type of data a name is!
 
 ## Exercise 4: OBJECTS
 
-Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. For example, you can save data into an object. So for example if you're given raw data about different Tiktok creators, we can assign them for e.g. their gender or nationality. Wherever R encounters the object, it will replace it with the data saved inside. 
+Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** An object is just a name that you can use to call up stored data. Wherever R encounters the object, it will replace it with the data saved inside. 
 
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it. This should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
+Let's firstly look at the tiktok data. Have a glance at the different headings there are and the sort of values that are displayed. From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 50 share counts on their video, we subset Tiktok creators who have a share count greater than 50 to the object tiktok_sharecount_greater_than_50 by doing this: 
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+<span
+style = "color:red; ">tiktok_sharecount_greater_than_50 <- subset(tiktok, shareCount>=50)</span>
 
-Now write a function that adds any two numbers and then call it:
+**Remember we have to use _ to separate words as R does not work with spaces!**
 
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
+
+Let's break this down!
+1. subset is the function which is telling the computer to unsuprisingly subset the tiktok data for those users that have a share count over 50. 
+2. the arrow creates the object as mentioned above
+3. tiktok is the name of the data so we need to tell the computer which data we want it to subset
+4. shareCount>= 50 means to assign the values where the share count is greater than or equal to 50. 
+
+
+
 
 ## Lets have a go at some statistics!
 
 **If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
-[someFile](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
+[hypotheses & p values](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
-Lets use R to investigate the descriptive statistics of a dataset. Let's have a go at finding the mean, median range and standard deviation of ... 
+Lets use R to investigate the descriptive statistics of the tiktok dataset previously used. Let's have a go at finding the mean, median range and standard deviation. Hint - it is very simple! 
 
+All we need to know are the functions to do this.
+
+To find the mean, we use the function mean() and in the brackets you firstly put the name of the data followed by a $ sign and then the specific subheading of your data. for example, if we want the mean of the play count of the tiktok data we would write: 
+
+mean(tiktok$playCount)
+
+the titles (tiktok and playCount) has to be identical to how it is written in the data as the computer will otherwise not recognise it. 
+
+```
+```{r}
 
 ```
 
