@@ -171,7 +171,7 @@ Let's break this down!
 ## Lets have a go at some statistics!
 
 **If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
-[hypotheses & p values](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
+[hypotheses & p values](https://liverpool.instructure.com/courses/28265/files/1388408?module_item_id=309084)
 
 Lets use R to investigate the descriptive statistics of the tiktok dataset previously used. Let's have a go at finding the mean, median range and standard deviation. Hint - it is very simple! 
 
