@@ -48,7 +48,7 @@ style = "color:red; ">What skills you will learn throughout LIFE223QS module:</s
 3. How to transform data
 4. How to visualize data using computational tools (called models) in R
 
-But firstly it is important to get to grips with R before we begin any actual statistics. 
+But firstly it is important to get to grips with the basics of R before we begin any actual statistics. 
 
 ## Exercise 1: CALCULATIONS
 
@@ -68,11 +68,7 @@ style = "color:red; ">*Write the R code required to multiply 5 by 2 and press 'R
 ```{r five-times-two-solution}
 5*2
 ```
-```{r five-times-two-check}
-random_praise(
-  pass_if(~identical(.result, 10))
-)
-"Well done!"
+
 ```
 
 You will notice a [1] appears next to your result. This just lets you know that this line begins with the first value in your result.
@@ -86,9 +82,7 @@ style = "color:red; ">*Great! Now lets try a slightly trickier equation. Write t
 ```{r fourteen-times-five-plus-twenty-divided-two-solution}
 14*5+20/2
 ```
-```{r fourteen-times-five-plus-twenty-divided-two-check}
-"Good job!"
-```
+
 
 ## Exercise 2: COMMENTS
 
@@ -129,16 +123,18 @@ quiz(caption = "Quiz")
 )           
 ```
 
-You may wonder why the word print comes before TikTok. Print() is an example of a `function`. **A function allows you to manipulate data. R comes with many functions that you can manipulate data with**. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
+You may wonder why the word print comes before TikTok. Print() is an example of a `function`. **A function allows you to manipulate data. R comes with many functions that you can manipulate data with**. In this case, the function print just does what it says - it prints the argument you put in. Using a function is simple, just write the name of the function and then the data you want the function to operate on in parentheses.
 
 The data you pass into the function is called the function's argument.
 In this case, the function print('Tiktok') tells the computer to do as it says; print TikTok.  
 
-*Have a go at printing your name as a character string*
+<span
+style="color:red;">*Have a go at printing Robin Hood as a character string*</span>
 
 ```{r print_name_, exercise=TRUE}
-print('your name')
-```
+
+```{r print_name_-solution}
+print('Robin Hood')
 
 ```{r print_name_-hint}
 Remember what type of data a name is!
@@ -151,6 +147,26 @@ Remember what type of data a name is!
 Now that we know how R can classify some basic types of information, we will now learn how to store them. R allows you to save data by storing it inside an R object. **What is an object?** `An object is just a name that you can use to call up stored data`. Wherever R encounters the object, it will replace it with the data saved inside. 
 
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
+
+```{r}
+#' Prices of 50,000 round cut diamonds.
+#'
+#' A dataset containing the prices and other attributes of almost 54,000
+#' diamonds.
+#'
+ @format A data frame with 53940 rows and 10 variables:
+ \describe{
+   \item{price}{price, in US dollars}
+   \item{carat}{weight of the diamond, in carats}
+#'   ...
+#' }
+#' @source \url{http://www.diamondse.info/}
+"diamonds"
+```
+
+
+
+
 
 Let's have a look at this tiktok data below. Firstly just have a glance at the different headings there are and the sort of values that are displayed. From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 50 share counts on their video (you might need to scroll across the data to find the share count column), we can subset Tiktok creators who have a share count greater than 50 to the object tiktok_sharecount_greater_than_50 by doing this: 
 
@@ -177,14 +193,14 @@ Don't panic! Let's break this down quickly:
 
 ![](https://media.giphy.com/media/9uXPLZpTgSHcY/giphy.gif)
 
-**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
+**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on.** 
 [hypotheses & p values](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
 Lets use R to investigate the descriptive statistics of the tiktok dataset previously used. Let's find the `mean`, `median` and `standard deviation`. Hint - it is very simple! 
 
 All we need to know are the `functions` to do this.
 
-To find the mean, we use the function mean() and in the brackets you firstly, put the name of the data that you want to investigate followed by a $ sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
+To find the mean, we use the function mean() and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
 
 **mean(tiktok$playCount)**
 
