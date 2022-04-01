@@ -149,7 +149,9 @@ Now that we know how R can classify some basic types of information, we will now
 
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
-```{r, file='~/Documents/TikTokR/data/tutorialdata.rda'}
+```{r data, include=FALSE}
+data <- Home/Documents/TikTokR::tutorialdata
+```
 
 
 ```
@@ -214,7 +216,7 @@ insert scattergraph
 
 
 ![](https://media.giphy.com/media/l0MYH8Q83CXvKzXyM/giphy.gif)
-**Well done, you have made it to the end of the tutorial and can relax! Hopefully you are feeling slightly more relaxed about using R and even learnt a few skills that you can carry onto the next tutorial.**
+**Well done, you have made it to the end of the tutorial! Hopefully you are feeling slightly more relaxed about using R and even learnt a few skills that you can carry onto the next tutorial.**
 
 
 ```
