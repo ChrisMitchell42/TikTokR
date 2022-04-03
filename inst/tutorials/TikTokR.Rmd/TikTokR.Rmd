@@ -148,10 +148,10 @@ Now that we know how R can classify some basic types of information, we will now
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
-```{r data, include=FALSE}
-
+```{r tiktok, include=FALSE}
 tiktok <- TikTokR::tutorialdata
 ```
+
 
 
 
