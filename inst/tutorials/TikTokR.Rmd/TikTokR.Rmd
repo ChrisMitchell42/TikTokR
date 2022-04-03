@@ -148,22 +148,18 @@ Now that we know how R can classify some basic types of information, we will now
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 ```{r data, include=FALSE}
-tiktok <- TikTokR::tutorialdata
-tiktok$shareCount <- log10(tiktok$shareCount)
-tiktok$playCount <- log10(tiktok$playCount)
-tiktok$commentCount <- log10(tiktok$commentCount)
-tiktok$diggCount <- log10(tiktok$diggCount)
-colnames(tiktok) <- c("UserID", "shareMetric", "playMetric","commentMetric","diggMetric")
+tiktok<- TiktokR::tutorialdata
+
 ```
 
 
-Let's have a look at this tiktok data below. Firstly just have a glance at the different headings there are and the sort of values that are displayed. 
+Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
 
 ```{r}
 head(tiktok)
 ```
 
-From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 50 share counts on their video (you might need to scroll across the data to find the share count column), we can subset Tiktok creators who have a share count greater than 50 to the object tiktok_sharecount_greater_than_50 by doing this: 
+From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 50 share counts on their video, we can subset Tiktok creators who have a share count greater than 50 to the object tiktok_sharecount_greater_than_50 by doing this: 
 
 ```{r, eval=FALSE, echo=TRUE}
 tiktok_sharecount_greater_than_50 <- subset(tiktok, shareCount>=50)
@@ -220,16 +216,32 @@ The variables (tiktok and playCount) have to be identical to how it is written i
 
 Now try to find the `median` of the playCount. I will tell you the function is median() however have a go at filling in the brackets yourself. 
 
-```{r}
+```{r median, exercise=TRUE}
 median(tiktok$playMetric)
-sd(tiktok$playMetric)
-plot(log10(tiktok$playMetric), log10(tiktok$diggMetric))
+
+```
+```{r median-solution}
+median(tiktok$playMetric)
 ```
 
-insert median chunk
-insert standard deviation chunk
-insert scattergraph
+Well done. Now let's find the standard deviation of the playCount using the function sd() and inserting the correct coding in the brackets. 
 
+```{r sd, exercise=TRUE}
+
+```
+```{r sd-solution}
+sd(tiktok$playCount)
+```
+
+Starting to get the hang of it? 
+The final task is to plot a scattergraph of the playCount against the diggCount. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
+
+```{r plot, exercise=TRUE}
+
+```
+```{r plot-solution}
+plot(tiktok$playCount), (tiktok$diggCount)
+```
 
 
 
