@@ -220,7 +220,7 @@ The variables (tiktok and playMetric) have to be identical to how it is written 
 Now try to find the `median` of the playMetric. I will tell you the function is median() however have a go at filling in the brackets yourself. 
 
 ```{r median, exercise=TRUE}
-median(tiktok$playMetric)
+
 
 ```
 ```{r median-solution}
