@@ -160,10 +160,10 @@ Let's have a look at this Tiktok data below. Firstly, just have a glance at the 
 head(tiktok)
 ```
 
-From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 50 share counts on their video, we can subset Tiktok creators who have a share count greater than 50 to the object tiktok_sharecount_greater_than_50 by doing this: 
+From this TikTok data, we can use objects to group certain Tiktok creators together. For example if we wanted to look at the Tiktok creators who have more than 3 share metrics on their video, we can subset Tiktok creators who have a share metric greater than 3 to the object tiktok_shareMetric_greater_than_3 by doing this: 
 
 ```{r, eval=FALSE, echo=TRUE}
-tiktok_sharecount_greater_than_50 <- subset(tiktok, shareCount>=50)
+tiktok_shareMetric_greater_than_3 <- subset(tiktok, shareCount>=3)
 ```
 
 
@@ -172,20 +172,19 @@ tiktok_sharecount_greater_than_50 <- subset(tiktok, shareCount>=50)
 
 Don't panic! Let's break this down quickly and explain why this looks like this:
 
-`1.` Subset is the function which is telling the computer to, unsurprisingly, subset the tiktok data for those users that have a share count over 50.
+`1.` Subset is the function which is telling the computer to, unsurprisingly, subset the tiktok data for those users that have a shareMetric over 3.
 
 `2.` The arrow creates the object as mentioned above
 
 `3.` Tiktok is the name of the data so we need to tell the computer which data we want it to subset
 
-`4.` shareCount>= 50 is telling the computer to assign the values where the share count is greater than or equal to 50. 
+`4.` shareMetric>= 3 is telling the computer to assign the values where the shareMetric is greater than or equal to 3. 
 
 
 ## TIME FOR SOME STATISTICS!
 
 **You're doing great! Not much more to go so stay with us!**
 
-![](https://media.giphy.com/media/9uXPLZpTgSHcY/giphy.gif)
 
 **If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on.** 
 [hypotheses & p values](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
@@ -199,7 +198,7 @@ Lets use R to investigate the descriptive statistics of the tiktok dataset previ
 
 All we need to know are the `functions` to do this.
 
-To find the `mean`, we use the function `mean()` and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
+To find the `mean`, we use the function `mean()` and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the playMetric of the tiktok data we would write: 
 
 
 ```{r, eval=FALSE, echo=TRUE}
@@ -248,10 +247,7 @@ The final task is to plot a scattergraph of the playMetric against the diggMetri
 plot(tiktok$playMetric, tiktok$diggMetric)
 ```
 
-
-
-
-
+You may not have got that the first time, however now you know the layout, you just replace the parts of the function with the variables you want to find. 
 
 
 ![](https://media.giphy.com/media/l0MYH8Q83CXvKzXyM/giphy.gif)
