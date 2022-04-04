@@ -13,6 +13,10 @@ library(gradethis)
 #remotes::install_github("rstudio/gradethis",'force=TRUE')
 #gradethis::gradethis_setup()
 knitr::opts_chunk$set(echo = FALSE)
+tiktok <- TikTokR::tutorialdata
+tiktok[,c(2:5)] <- log10(tiktok[,c(2:5)])
+colnames(tiktok) <- c("UserID","shareMetric","playMetric",
+                      "commentMetric","diggMetric")
 
 
 ```
@@ -149,13 +153,6 @@ To create an object, choose a name and then use the `<` symbol, followed by a mi
 
 
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their share counts, playcounts, comment counts and digg counts. 
-
-```{r tiktok, include=FALSE, eval=TRUE}
-tiktok <- TikTokR::tutorialdata
-tiktok[,c(2:5)] <- log10(tiktok[,c(2:5)])
-colnames(tiktok) <- c("UserID","shareMetric","playMetric",
-                      "commentMetric","diggMetric")
-```
 
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
 
