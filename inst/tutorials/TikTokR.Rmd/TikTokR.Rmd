@@ -54,7 +54,7 @@ But firstly it is important to get to grips with the basics of R before we begin
 ## Exercise 1: CALCULATIONS
 
 
-Lets write your first line of R code to calculate some basic math. The code you type is called a `command`, as it commands your computer to do something for you. The line you type it into is called the command line. When you type a command and press `run code`, your computer executes the command and presents the results to you. 
+Lets write your first line of R code to calculate some basic maths. The code you type is called a `command`, as it commands your computer to do something for you. The line you type it into is called the command line. When you type a command and press `run code`, your computer executes the command and presents the results to you. 
 
 Lets begin with basic syntax to do mathematical calculations in R. R can do addition, subtraction, multiplication and division with `+ , - , * and / `. Syntax just means the structure of statements in a computer language. Mathematical operations in R follow the standard mathematical order of operations aka BIDMASS. 
 
@@ -92,10 +92,10 @@ Humans will be able to read the comments however your computer will dismiss them
 <span
 style = "color:red; ">*Add a comment inside this code block of how to calculate the probability of two dice being the same particular number*</span> 
 
-```{r include=TRUE, sixth-times-sixth, exercise=TRUE}
+```{r, include=TRUE, sixth-times-sixth, exercise=TRUE}
 1/6*1/6
 
-```{r include=TRUE, sixth-times-sixth-solution}
+```{r, include=TRUE, sixth-times-sixth-solution}
 #Probability of two dice being the same particular number
 ```
 
@@ -158,7 +158,6 @@ colnames(tiktok) <- c("UserID","shareMetric","playMetric",
 ```
 
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
->>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 
 ```{r}
 head(tiktok)
@@ -205,17 +204,9 @@ All we need to know are the `functions` to do this.
 
 To find the `mean`, we use the function `mean()` and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
 
-<<<<<<< HEAD
-
-
-
 
 ```{r, eval=FALSE, echo=TRUE}
-mean(tiktok$playCount)
-=======
-```{r,echo = TRUE}
 mean(tiktok$playMetric)
-
 ```
 
 Have a go at this in the code chunk below:
@@ -224,7 +215,7 @@ Have a go at this in the code chunk below:
 
 ```
 ```{r mean-solution}
-mean(tiktok$playCount)
+mean(tiktok$playMetric)
 ```
 
 
@@ -249,24 +240,15 @@ Well done. Now let's find the standard deviation of the playMetric using the fun
 sd(tiktok$playMetric)
 ```
 
-<<<<<<< HEAD
 **Starting to get the hang of it?**
 
-The final task is to plot a scatterplot of the playCount against the shareCount. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
-=======
-Starting to get the hang of it? 
 The final task is to plot a scattergraph of the playMetric against the diggMetric. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
->>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 
 ```{r plot, exercise=TRUE}
 
 ```
 ```{r plot-solution}
-<<<<<<< HEAD
-plot(tiktok$playCount,tiktok$shareCount)
-=======
-plot(tiktok$playMetric, tiktok$playMetric)
->>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
+plot(tiktok$playMetric, tiktok$diggMetric)
 ```
 
 
