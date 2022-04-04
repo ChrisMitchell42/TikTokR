@@ -148,20 +148,8 @@ Now that we know how R can classify some basic types of information, we will now
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
-<<<<<<< HEAD
-```{r tiktok, include=FALSE}
-devtools::install_github("ChrisMitchell42/TikTokR")
-
-tiktok <- TikTokR::tutorialdata
-tiktok[,c(2:5)] <- (tiktok[,c(2:5)])
-```
-
-
-
-
-
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their share counts, playcounts, comment counts and digg counts. 
-=======
+
 ```{r tiktok, include=FALSE, eval=TRUE}
 tiktok <- TikTokR::tutorialdata
 tiktok[,c(2:5)] <- log10(tiktok[,c(2:5)])
@@ -227,7 +215,7 @@ mean(tiktok$playCount)
 =======
 ```{r,echo = TRUE}
 mean(tiktok$playMetric)
->>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
+
 ```
 
 Have a go at this in the code chunk below:
