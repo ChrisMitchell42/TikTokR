@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Welcome to your first `lesson in R`. 
 
-What is R you may ask? **R is a language that allows you to conduct statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+What is R you may ask? **R is a language that allows you to do statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
 
 
 **Now the thought of coding might make you feel like this...**
@@ -42,7 +42,7 @@ What is R you may ask? **R is a language that allows you to conduct statistics a
 The aim throughout this module is to teach you skills in R which will allow you to do data science; that is, analysing, visualising and interpreting raw data which is usually from a file or database. We also want you to feel confident using R and enjoy learning something new!
 
 <span
-style = "color:red; ">What skills you will learn throughout LIFE223QS module:</span> 
+style = "color:red; ">What skills you will learn throughout this module:</span> 
 
 1. How to import data into R
 2. How to tidy data 
@@ -130,12 +130,12 @@ In this case, the function print('Tiktok') tells the computer to do as it says; 
 <span
 style="color:red;">*Have a go at printing Robin Hood as a character string*</span>
 
-```{r print_name_, exercise=TRUE}
+```{r print, exercise=TRUE}
 
-```{r print_name_-solution}
+```{r print-solution}
 print('Robin Hood')
 
-```{r print_name_-hint}
+```{r print-hint}
 Remember what type of data a name is!
 ```
 
@@ -149,14 +149,17 @@ To create an object, choose a name and then use the `<` symbol, followed by a mi
 
 
 ```{r tiktok, include=FALSE}
+devtools::install_github("ChrisMitchell42/TikTokR")
+
 tiktok <- TikTokR::tutorialdata
+tiktok[,c(2:5)] <- (tiktok[,c(2:5)])
 ```
 
 
 
 
 
-Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
+Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their share counts, playcounts, comment counts and digg counts. 
 
 ```{r}
 head(tiktok)
@@ -172,9 +175,9 @@ tiktok_sharecount_greater_than_50 <- subset(tiktok, shareCount>=50)
 **Remember we have to use `_` to separate words as R does not work with spaces!**
 
 
-Don't panic! Let's break this down quickly:
+Don't panic! Let's break this down quickly and explain why this looks like this:
 
-`1.` Subset is the function which is telling the computer to unsuprisingly subset the tiktok data for those users that have a share count over 50.
+`1.` Subset is the function which is telling the computer to, unsurprisingly, subset the tiktok data for those users that have a share count over 50.
 
 `2.` The arrow creates the object as mentioned above
 
@@ -197,21 +200,27 @@ head(tiktok)
 ```
 
 
-Lets use R to investigate the descriptive statistics of the tiktok dataset previously used. Let's find the `mean`, `median` and `standard deviation`. Hint - it is very simple! 
+Lets use R to investigate the descriptive statistics of the tiktok dataset previously used. Let's find the `mean`, `median` and `standard deviation`. Hint - it is not as tricky as it sounds!
 
 All we need to know are the `functions` to do this.
 
-To find the mean, we use the function mean() and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
+To find the `mean`, we use the function `mean()` and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
 
-```{r}
-mean(tiktok$playMetric)
+
+
+
+
+```{r, eval=FALSE, echo=TRUE}
+mean(tiktok$playCount)
 ```
+
+Have a go at this in the code chunk below:
 
 ```{r mean, exercise=TRUE}
 
 ```
 ```{r mean-solution}
-mean(tiktok$playMetric)
+mean(tiktok$playCount)
 ```
 
 
@@ -236,14 +245,15 @@ Well done. Now let's find the standard deviation of the playCount using the func
 sd(tiktok$playCount)
 ```
 
-Starting to get the hang of it? 
-The final task is to plot a scattergraph of the playCount against the diggCount. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
+**Starting to get the hang of it?**
+
+The final task is to plot a scatterplot of the playCount against the shareCount. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
 
 ```{r plot, exercise=TRUE}
 
 ```
 ```{r plot-solution}
-plot(tiktok$playCount), (tiktok$diggCount)
+plot(tiktok$playCount,tiktok$shareCount)
 ```
 
 
