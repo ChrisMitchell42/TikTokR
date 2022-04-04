@@ -148,6 +148,7 @@ Now that we know how R can classify some basic types of information, we will now
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
+<<<<<<< HEAD
 ```{r tiktok, include=FALSE}
 devtools::install_github("ChrisMitchell42/TikTokR")
 
@@ -160,6 +161,16 @@ tiktok[,c(2:5)] <- (tiktok[,c(2:5)])
 
 
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their share counts, playcounts, comment counts and digg counts. 
+=======
+```{r tiktok, include=FALSE, eval=TRUE}
+tiktok <- TikTokR::tutorialdata
+tiktok[,c(2:5)] <- log10(tiktok[,c(2:5)])
+colnames(tiktok) <- c("UserID","shareMetric","playMetric",
+                      "commentMetric","diggMetric")
+```
+
+Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
+>>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 
 ```{r}
 head(tiktok)
@@ -206,12 +217,17 @@ All we need to know are the `functions` to do this.
 
 To find the `mean`, we use the function `mean()` and in the brackets you firstly, put the name of the data that you want to investigate followed by a `$` sign and then the specific variable of your data that you want to know. For example, if we want the mean of the play count of the tiktok data we would write: 
 
+<<<<<<< HEAD
 
 
 
 
 ```{r, eval=FALSE, echo=TRUE}
 mean(tiktok$playCount)
+=======
+```{r,echo = TRUE}
+mean(tiktok$playMetric)
+>>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 ```
 
 Have a go at this in the code chunk below:
@@ -224,9 +240,9 @@ mean(tiktok$playCount)
 ```
 
 
-The variables (tiktok and playCount) have to be identical to how it is written in the data as the computer will otherwise not recognise it. The `$` sign allows us to access one particular variable in the tiktok dataset. 
+The variables (tiktok and playMetric) have to be identical to how it is written in the data as the computer will otherwise not recognise it. The `$` sign allows us to access one particular variable in the tiktok dataset. 
 
-Now try to find the `median` of the playCount. I will tell you the function is median() however have a go at filling in the brackets yourself. 
+Now try to find the `median` of the playMetric. I will tell you the function is median() however have a go at filling in the brackets yourself. 
 
 ```{r median, exercise=TRUE}
 median(tiktok$playMetric)
@@ -236,24 +252,33 @@ median(tiktok$playMetric)
 median(tiktok$playMetric)
 ```
 
-Well done. Now let's find the standard deviation of the playCount using the function sd() and inserting the correct coding in the brackets. 
+Well done. Now let's find the standard deviation of the playMetric using the function sd() and inserting the correct coding in the brackets. 
 
 ```{r sd, exercise=TRUE}
 
 ```
 ```{r sd-solution}
-sd(tiktok$playCount)
+sd(tiktok$playMetric)
 ```
 
+<<<<<<< HEAD
 **Starting to get the hang of it?**
 
 The final task is to plot a scatterplot of the playCount against the shareCount. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
+=======
+Starting to get the hang of it? 
+The final task is to plot a scattergraph of the playMetric against the diggMetric. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
+>>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 
 ```{r plot, exercise=TRUE}
 
 ```
 ```{r plot-solution}
+<<<<<<< HEAD
 plot(tiktok$playCount,tiktok$shareCount)
+=======
+plot(tiktok$playMetric, tiktok$playMetric)
+>>>>>>> 9f3799ebe4b3d1a4175aef46dead401173c41ef0
 ```
 
 
