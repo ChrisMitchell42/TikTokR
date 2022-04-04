@@ -26,7 +26,7 @@ colnames(tiktok) <- c("UserID","shareMetric","playMetric",
 
 Welcome to your first `lesson in R`. 
 
-What is R you may ask? **R is a language that allows you to do statistics and data analysis**. R gives you a way to talk to your computer. R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
+What is R you may ask? R allows you to talk to your computer; **it is a language that enables you to do statistics and data analysis.** R is more of a tool to understand data than a programming language used to build software applications for e.g. like Python. You may wonder why we are teaching you to code and this is simply because it is an employable skill that will be beneficial throughout your degree and in the future (many employers look for this skill in their graduate applicants). 
 
 
 **Now the thought of coding might make you feel like this...**
@@ -152,7 +152,7 @@ Now that we know how R can classify some basic types of information, we will now
 To create an object, choose a name and then use the `<` symbol, followed by a minus `-` sign to save data into it which should look like `<-`. R will then make an object, give it your name, and store in it whatever follows the arrow. 
 
 
-Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their share counts, playcounts, comment counts and digg counts. 
+Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. The Id variable is just how the Tiktok users are identified and next to them is their shareMetrics, playMetrics, commentMetrics and diggMetrics. 
 
 Let's have a look at this Tiktok data below. Firstly, just have a glance at the different headings there are and the sort of values that are displayed. 
 
@@ -170,7 +170,7 @@ tiktok_shareMetric_greater_than_3 <- subset(tiktok, shareCount>=3)
 **Remember we have to use `_` to separate words as R does not work with spaces!**
 
 
-Don't panic! Let's break this down quickly and explain why this looks like this:
+Don't panic! Let's break this down quickly and explain why this code is written the way it is:
 
 `1.` Subset is the function which is telling the computer to, unsurprisingly, subset the tiktok data for those users that have a shareMetric over 3.
 
@@ -227,7 +227,7 @@ median(tiktok$playMetric)
 median(tiktok$playMetric)
 ```
 
-Well done. Now let's find the standard deviation of the playMetric using the function sd() and inserting the correct coding in the brackets. 
+Well done. Now let's find the standard deviation of the playMetric using the function `sd()` and inserting the correct coding in the brackets. 
 
 ```{r sd, exercise=TRUE}
 
@@ -238,7 +238,7 @@ sd(tiktok$playMetric)
 
 **Starting to get the hang of it?**
 
-The final task is to plot a scattergraph of the playMetric against the diggMetric. To do this we use the function plot(). Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
+The final task is to plot a scattergraph of the playMetric against the diggMetric. To do this we use the function `plot()`. Remember that you must tell the computer what dataset you are getting your variables from and these must be separated by a comma!
 
 ```{r plot, exercise=TRUE}
 
