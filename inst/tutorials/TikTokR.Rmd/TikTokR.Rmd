@@ -174,7 +174,7 @@ Don't panic! Let's break this down quickly and explain why this code is written 
 
 `1.` Subset is the function which is telling the computer to, unsurprisingly, subset the tiktok data for those users that have a shareMetric over 3.
 
-`2.` The arrow creates the object as mentioned above
+`2.` The arrow assigns the object to the name we have chosen
 
 `3.` Tiktok is the name of the data so we need to tell the computer which data we want it to subset
 
@@ -186,7 +186,7 @@ Don't panic! Let's break this down quickly and explain why this code is written 
 **You're doing great! Not much more to go so stay with us!**
 
 
-**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on.** 
+**If statistics is a new concept to you or you simply want to refresh your knowledge on hypotheses and p values have a read of this PDF document before moving on:** 
 [hypotheses & p values](/inst/tutorials/TikTokR.Rmd/images/Hypotheses_and_p_values.pdf)
 
 ```{r}
