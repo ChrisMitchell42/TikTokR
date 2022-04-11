@@ -8,7 +8,7 @@ progressive: true
 ```{r setup, include=FALSE}
 library(learnr)
 library(tidyverse)
-library(gradethis)
+#library(gradethis)
 #remotes::install_github("rstudio/learnr")
 #remotes::install_github("rstudio/gradethis",'force=TRUE')
 #gradethis::gradethis_setup()
